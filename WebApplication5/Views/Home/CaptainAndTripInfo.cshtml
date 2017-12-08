@@ -1,0 +1,87 @@
+﻿@*@using WebApplication5.Models
+    @model CaptainAndTripInfoModel*@
+@{
+    ViewBag.Title = "CaptainAndTripInfo";
+}
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+</head>
+<body>
+    <!-- Contact Form - sent to a Google Sheet -->
+    <form id='foo'>
+        @*<p>
+            <label>Name</label>
+            <input id='name' name='name' type='text'>
+        </p><p>
+            <label>Email Address</label>
+            <input id='email' name='email' type='email'>
+        </p><p>
+            <label>Phone Number</label>
+            <input id='phone' name='phone' type='tel'>
+        </p><p>
+            <label>Message</label>
+            <textarea id='message' name='message' rows='5'></textarea>
+        </p><p>
+            <label>Last Name</label>
+            <input id='last' name='last' type='text'>
+        </p>*@<p>
+            <label>Captain</label>
+            <input id='captain' name='captain' type='text'>
+        </p>
+        <div id='success'></div>
+        <button type='submit'>Send</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/google-sheet.js"></script>
+</body>
+</html>
+
+@*<script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+            $("#datepicker").datepicker("setDate", 'today');
+        });
+    </script>
+    <style>
+        .ui-datepicker {
+            font-size: 150%;
+            padding-bottom: 10%;
+            position: absolute;
+            align-content: center;
+            text-align: center;
+        }
+
+        .popup {
+            max-height: 10%;
+        }
+    </style>
+
+    <h2>Captain And Trip Info</h2>
+    <form>
+        @Html.LabelFor(m => m.CaptainName)
+        @Html.TextBoxFor(m => m.CaptainName, new { placeholder = "Captain Name" })
+        @Html.LabelFor(m => m.FirstMate)
+        @Html.RadioButtonFor(m => m.FirstMate, false) Yes
+        @Html.RadioButtonFor(m => m.FirstMate, false) No
+        @Html.LabelFor(m => m.FirstMateName)
+        @Html.TextBoxFor(m => m.CaptainName, new { placeholder = "First Mate Name" })
+        @Html.LabelFor(m => m.Date)
+        @Html.TextBoxFor(m => m.Date, new { @id = "datepicker" })
+        @Html.LabelFor(m => m.Boat)
+        @Html.TextBoxFor(m => m.Boat, new { placeholder = "Boat" })
+        @Html.LabelFor(m => m.NumberOfFishCaught)
+        @Html.TextBoxFor(m => m.NumberOfFishCaught, new { placeholder = "Number Of Fish Caught" })
+        @Html.LabelFor(m => m.NumberOfFishThownBack)
+        @Html.TextBoxFor(m => m.NumberOfFishThownBack, new { placeholder = "Number Of Fish Thrown Back" })
+        @Html.LabelFor(m => m.MotorUsedForTrolling)
+        @Html.RadioButtonFor(m => m.MotorUsedForTrolling, false) Port
+        @Html.RadioButtonFor(m => m.MotorUsedForTrolling, false) Starboard
+        <button class=" btn btn-success">Submit</button>
+    </form>*@
