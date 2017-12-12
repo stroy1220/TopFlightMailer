@@ -11,77 +11,52 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
 </head>
-<body>
-    <!-- Contact Form - sent to a Google Sheet -->
-    <form id='foo'>
-        @*<p>
-            <label>Name</label>
-            <input id='name' name='name' type='text'>
-        </p><p>
-            <label>Email Address</label>
-            <input id='email' name='email' type='email'>
-        </p><p>
-            <label>Phone Number</label>
-            <input id='phone' name='phone' type='tel'>
-        </p><p>
-            <label>Message</label>
-            <textarea id='message' name='message' rows='5'></textarea>
-        </p><p>
-            <label>Last Name</label>
-            <input id='last' name='last' type='text'>
-        </p>*@<p>
-            <label>Captain</label>
-            <input id='captain' name='captain' type='text'>
-        </p>
-        <div id='success'></div>
-        <button type='submit'>Send</button>
-    </form>
+<body class="background">
+    <div class="well well-lg">
+        <!-- Contact Form - sent to a Google Sheet -->
+        <form onsubmit="window.confirm('success');" id='foo'>
+            <p>
+                <label>Captain</label>
+                <input id='captain' name='captain' type='text' placeholder="first and last name">
+            </p><p>
+                <label>First Mate</label>
+                <input type="radio" id="firstmate" name="firstmate" value="yes" />yes
+                <input type="radio" id="firstmate" name="firstmate" value="no" />no
+            </p><p>
+                <label>First Mate Name</label>
+                <input id='fmname' name='fmname' type='text' placeholder="first and last name">
+            </p><p>
+                <label>Boat</label>
+                <input type="radio" id="boat" name="boat" value="Top Flight I" />Top Flight I
+                <input type="radio" id="boat" name="boat" value="Top Flight II" />Top Flight II
+                <input type="radio" id="boat" name="boat" value="Top Flight III" />Top Flight III
+                <input type="radio" id="boat" name="boat" value="Top Flight IV" />Top Flight IV
+                <input type="radio" id="boat" name="boat" value="Top Flight JR" />Top Flight JR
+            </p><p>
+                <label>Motor Used For Trolling</label>
+                <input type="radio" id="motor" name="motor" value="Port" />Port
+                <input type="radio" id="motor" name="motor" value="Starboard" />Starboard
+            </p><p>
+                <label>Number Of Fish Caught</label>
+                <input id='keepers' name='keepers' type='text'>
+            </p><p>
+                <label>Number Of Fish Thown Back</label>
+                <input id='thrownback' name='thrownback' type='text'>
+            </p>
+            <p class="help-block">
+                Example block-level help text here.
+                <label for="exampleInputFile">File input</label>
+                <input id="file" name="file" type="file">
+            </p>
+            <div id='success'>
+                <button class="btn btn-danger" type='submit'>Send</button>
+            </div>
+        </form>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Custom Theme JavaScript -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <script src="~/Content/google-sheet.js"></script>
 </body>
 </html>
-
-@*<script>
-        $(document).ready(function () {
-            $("#datepicker").datepicker();
-            $("#datepicker").datepicker("setDate", 'today');
-        });
-    </script>
-    <style>
-        .ui-datepicker {
-            font-size: 150%;
-            padding-bottom: 10%;
-            position: absolute;
-            align-content: center;
-            text-align: center;
-        }
-
-        .popup {
-            max-height: 10%;
-        }
-    </style>
-
-    <h2>Captain And Trip Info</h2>
-    <form>
-        @Html.LabelFor(m => m.CaptainName)
-        @Html.TextBoxFor(m => m.CaptainName, new { placeholder = "Captain Name" })
-        @Html.LabelFor(m => m.FirstMate)
-        @Html.RadioButtonFor(m => m.FirstMate, false) Yes
-        @Html.RadioButtonFor(m => m.FirstMate, false) No
-        @Html.LabelFor(m => m.FirstMateName)
-        @Html.TextBoxFor(m => m.CaptainName, new { placeholder = "First Mate Name" })
-        @Html.LabelFor(m => m.Date)
-        @Html.TextBoxFor(m => m.Date, new { @id = "datepicker" })
-        @Html.LabelFor(m => m.Boat)
-        @Html.TextBoxFor(m => m.Boat, new { placeholder = "Boat" })
-        @Html.LabelFor(m => m.NumberOfFishCaught)
-        @Html.TextBoxFor(m => m.NumberOfFishCaught, new { placeholder = "Number Of Fish Caught" })
-        @Html.LabelFor(m => m.NumberOfFishThownBack)
-        @Html.TextBoxFor(m => m.NumberOfFishThownBack, new { placeholder = "Number Of Fish Thrown Back" })
-        @Html.LabelFor(m => m.MotorUsedForTrolling)
-        @Html.RadioButtonFor(m => m.MotorUsedForTrolling, false) Port
-        @Html.RadioButtonFor(m => m.MotorUsedForTrolling, false) Starboard
-        <button class=" btn btn-success">Submit</button>
-    </form>*@

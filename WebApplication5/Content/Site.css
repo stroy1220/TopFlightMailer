@@ -22,3 +22,16 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.background {
+    /*background-image: url(https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?h=350&auto=compress&cs=tinysrgb);*/
+    background-image: url(https://images.pexels.com/photos/209810/pexels-photo-209810.jpeg?h=350&auto=compress&cs=tinysrgb);
+    /*position: relative;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.well {
+    margin-top: 25%;
+    opacity: 0.9;
+}

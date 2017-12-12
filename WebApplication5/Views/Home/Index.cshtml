@@ -9,75 +9,43 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
 </head>
-<body>
-    <!-- Contact Form - sent to a Google Sheet -->
-    <form id='foo'>
-        <p>
-            <label>Name</label>
-            <input id='name' name='name' type='text'>
-        </p><p>
-            <label>Email Address</label>
-            <input id='email' name='email' type='email'>
-        </p><p>
-            <label>Phone Number</label>
-            <input id='phone' name='phone' type='tel'>
-        </p><p>
-            <label>Message</label>
-            <textarea id='message' name='message' rows='5'></textarea>
-        </p><p>
-            <label>Last Name</label>
-            <input id='last' name='last' type='text'>
-        </p>
-        <div id='success'></div>
-        <button type='submit'>Send</button>
-    </form>
+<body class="background">
+    <div class="well well-lg">
+        <!-- Contact Form - sent to a Google Sheet -->
+        <form onsubmit="window.confirm('success');" id='foo'>
+            <p>
+                <label>First Name</label>
+                <input id='first' name='first' type='text' placeholder="John">
+            </p><p>
+                <label>Last Name</label>
+                <input id='last' name='last' type='text' placeholder="Doe">
+            </p><p>
+                <label>Email Address</label>
+                <input id='email' name='email' type='email' placeholder="JohnDoe@gmail.com">
+            </p><p>
+                <label>Street Address</label>
+                <input id='street' name='street' type='text' placeholder="101 River St">
+            </p><p>
+                <label>City</label>
+                <input id='city' name='city' type='text' placeholder="Grand River">
+            </p><p>
+                <label>State</label>
+                <input id='state' name='state' type='text' placeholder="OH">
+            </p><p>
+                <label>Zip</label>
+                <input id='zip' name='zip' type='text' placeholder="44045">
+            </p><p>
+                <label>Phone Number</label>
+                <input id='phone' name='phone' type='tel' placeholder="(440)123-4567">
+            </p>
+            <div id='success'></div>
+            <button class="btn btn-lg btn-warning" type='submit'>Subscribe</button>
+        </form>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Custom Theme JavaScript -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <script src="~/Content/google-sheet.js"></script>
 </body>
 </html>
-
-
-@*@using WebApplication5.Models
-    @model IndexModel
-
-
-    <div class="jumbotron">
-        <h1>Top Flight Client Info</h1>
-        <p class="lead"><a href="https://placeholder.com"><img src="http://via.placeholder.com/1000x265"></a></p>
-
-    </div>
-    <form action="@Url.Action("Index", "Home")" method="post">
-        <div class="row">
-            <div class="col-md-4">
-
-                    <h2>Getting started</h2>
-                    @Html.LabelFor(m => m.FirstName)
-                    @Html.TextBoxFor(m => m.FirstName, new { placeholder = "First Name" })
-                    <br />
-                    @Html.LabelFor(m => m.LastName)
-                    @Html.TextBoxFor(m => m.LastName, new { placeholder = "Last Name" })
-                    <br />
-                    @Html.LabelFor(m => m.EmailAddresss)
-                    @Html.TextBoxFor(m => m.EmailAddresss, new { placeholder = "Email" })
-                    <br />
-                    @Html.LabelFor(m => m.StreetAddress)
-                    @Html.TextBoxFor(m => m.StreetAddress, new { placeholder = "Street Addresss" })
-                    <br />
-                    @Html.LabelFor(m => m.City)
-                    @Html.TextBoxFor(m => m.City, new { placeholder = "City" })
-                    <br />
-                    @Html.LabelFor(m => m.State)
-                    @Html.TextBoxFor(m => m.State, new { placeholder = "State" })
-                    <br />
-                    @Html.LabelFor(m => m.Zip)
-                    @Html.TextBoxFor(m => m.Zip, new { placeholder = "Zip" })
-                    <br />
-                    @Html.LabelFor(m => m.Phone)
-                    @Html.TextBoxFor(m => m.Phone, new { placeholder = "Phone" })
-                    <br />
-                    <button class="btn btn-success">Submit</button>
-                </div>
-            </div>
-        </form>*@
